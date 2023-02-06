@@ -185,7 +185,7 @@ class ts_model(object):
             return epoch_loss
 
     def fit(self, train_data):
-        train_data = self.scaler.fit_transform(train_data.reshape(-1,1))
+        train_data = self.scaler.fit_transform(train_data.reshape(-1,1))    # 转为（N*1）的数组，然后使用MaxMinScaler进行归一化
         train_samples = int(train_data.shape[0] * self.train_proportion)
         train_loader = DataLoader(dataset=get_dataset(get_samples(train_data[:train_samples],
                                                                   self.wnd_len, self.pred_len)),
