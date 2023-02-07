@@ -193,6 +193,7 @@ class ts_model(object):
         val_loader = DataLoader(dataset=get_dataset(get_samples(train_data[train_samples:],
                                                                 self.wnd_len, self.pred_len)),
                                 batch_size=self.batch_size)
+        # 训练模型
         for i in range(self.n_epochs):
             train_loss, val_loss = self.__train(train_loader, val_loader)
             if self.verbose:

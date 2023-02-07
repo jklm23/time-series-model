@@ -20,7 +20,7 @@ ts.plot_predict_result(preds, reals)
 
 Some model parameters are diagrammed below：
 
-![model-part-parameters](https://github.com/yyqcs/time-series-model/blob/master/fig/model-part-parameters.jpg)
+![model-part-parameters](fig/model-part-parameters.jpg)
 
 | The meaning of model parameters                              |
 | ------------------------------------------------------------ |
